@@ -1,11 +1,11 @@
 Summary: Root crontab files used to schedule the execution of programs
 Name: crontabs
 Version: 1.10
-Release: 32.1%{?dist}
+Release: 33%{?dist}
 License: Public Domain and GPLv2
 Group: System Environment/Base
 # no URL - it's only a one script which is used by different packages
-Source0: crontab
+Source0: crontab1
 Source1: run-parts
 Source2: crontabs.4
 BuildArch: noarch
@@ -50,6 +50,11 @@ rm -rf $RPM_BUILD_ROOT
 %dir /etc/cron.monthly
 
 %changelog
+* Fri Jun  3 2011 Marcela Mašláňová <mmaslano@redhat.com> 1.10-33
+- add into example in crontab user-name
+- change name of crontab to crontab1 to be able add patch into cvs
+- Resolves: rhbz#609544
+
 * Mon Nov 30 2009 Dennis Gregorovic <dgregor@redhat.com> - 1.10-32.1
 - Rebuilt for RHEL 6
 
