@@ -2,7 +2,7 @@
 Summary: Root crontab files used to schedule the execution of programs
 Name: crontabs
 Version: 1.11
-Release: 5.%{snap_release}%{?dist}
+Release: 6.%{snap_release}%{?dist}
 License: Public Domain and GPLv2
 Group: System Environment/Base
 URL: https://fedorahosted.org/crontabs 
@@ -11,7 +11,7 @@ BuildArch: noarch
 Requires: /etc/cron.d
 
 %description
-This package is used mainly for executing files by cron.
+This package is used by Fedora mainly for executing files by cron.
 
 The crontabs package contains root crontab files and directories.
 You will need to install cron daemon to run the jobs from the crontabs.
@@ -56,6 +56,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man4/*
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1.11-6.20121102git
+- Mass rebuild 2013-12-27
+
+* Wed Feb 13 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.11-5.20121102git
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
+
 * Thu Nov  1 2012 Marcela Mašláňová <mmaslano@redhat.com> 1.11-5.20121102git
 - update to the latest git snapshot with copying file and fixed man pages
 
